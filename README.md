@@ -180,6 +180,7 @@ async def main():
 
     user_count1 = await User.count()
     new_order_count1 = await PayOrder.count()
+    
     # successful transaction
     await trancation_test(False)
 
@@ -197,7 +198,7 @@ async def main():
 
     user_count3 = await User.count()
     new_order_count3 = await PayOrder.count()
-    # count nor change
+    # count not change
     assert user_count3 == user_count2
     assert new_order_count3 == new_order_count2
     print('trancation test ok.')
