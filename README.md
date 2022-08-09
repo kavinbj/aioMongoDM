@@ -342,5 +342,11 @@ For more examples, please query the example folder.
     * `session`:  ClientSession instance for transaction operation
 
 
+# Test 
+```bash
+cd tests
+pytest --url mongodb://localhost:27000 -vs --cov --cov-report=html
+```
+
 # Developer
 kavinbj
