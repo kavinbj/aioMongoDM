@@ -126,7 +126,7 @@ if __name__ == '__main__':
 ```
 
 ## Transcation ##  
-**Notice: transaction need replication set env, e.g. one Primary Server, one Secondary Server, one Arbiter Server. [Detail Configuration][https://www.mongodb.com/docs/v5.0/reference/configuration-options/]**
+**Notice: transaction need replication set env, e.g. one Primary Server, one Secondary Server, one Arbiter Server. [Detail Configuration](https://www.mongodb.com/docs/v5.0/reference/configuration-options/)**
 ```python
 from bson.objectid import ObjectId
 from datetime import datetime
@@ -227,7 +227,7 @@ For more examples, please query the example folder.
 * #### `__schema__` ####
      Set the initializing data for all objects in the collection when the object is initialized. Defined field default value and type will be checked .
 
-* #### `save(session=None)` ####
+* #### `save(session: Optional[ClientSession] = None)` ####
     __Coroutine__. It saves the object in the database, attribute '_id' will be generated if success
     * `session`:  ClientSession instance for transaction operation
    
@@ -235,7 +235,7 @@ For more examples, please query the example folder.
     __Coroutine__. It remove an object from the database. If the object does not exist in the database, 
     then the __AioMongoDocumentDoesNotExist__ exception will be raised.
 
-* #### `refresh(session=None)` ####
+* #### `refresh(session: Optional[ClientSession] = None)` ####
     __Coroutine__. Refresh the current object from the same object from the database. 
     If the object does not exist in the database, then the __AioMongoDocumentDoesNotExist__ exception will be raised.
     * `session`:  ClientSession instance for transaction operation
@@ -262,12 +262,12 @@ For more examples, please query the example folder.
     * `obj`:  an object instance
     
     
-* #### `find_by_id(oid: Union[str, ObjectId], session=None) -> Optional[_Document]` ####
+* #### `find_by_id(oid: Union[str, ObjectId], session: Optional[ClientSession] = None) -> Optional[_Document]` ####
     __Coroutine Class Method__. document query based on document ID. e.g. User.find_by_id('xxxxxxx') 
     * `oid`:  Document ID, str or ObjectId
     * `session`:  ClientSession instance for transaction operation
     
-* #### `delete_by_id(oid: Union[str, ObjectId], session=None)` ####
+* #### `delete_by_id(oid: Union[str, ObjectId], session: Optional[ClientSession] = None)` ####
     __Coroutine Class Method__. delete document instance according to document ID. e.g. User.delete_by_id('xxxxxxx') 
     * `oid`:  Document ID, str or ObjectId
     * `session`:  ClientSession instance for transaction operation
@@ -298,7 +298,7 @@ For more examples, please query the example folder.
 
 * #### `get_collection(db_name: str = None) -> AioCollection` ####
     __Class Method__. get aio collection through the specified db name, if db_name is not None. 
-    use attribute __db_name__  if db_name is None.
+    use attribute `__db_name__`  if db_name is None.
     * `db_name`:  database name 
 
 * #### `create_index(session: Optional[ClientSession] = None) -> list` ####
