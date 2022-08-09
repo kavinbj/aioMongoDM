@@ -5,7 +5,7 @@ asynchronous lightweight ODM for MongoDB based on [motor](https://github.com/mon
 # Suitable Application Environment
 The goal of this package is to create an asynchronous, simple and intuitive ODM, which can be easily applied to the python asynchronous framework system.
 If you happen to like asynchronous framework very much and use mongodb as your data storage system.
-* [Motor documentation][https://motor.readthedocs.io/en/stable/index.html]
+* [Motor documentation](https://motor.readthedocs.io/en/stable/index.html)
 
 # Installation
 ```bash
