@@ -8,8 +8,8 @@ description:
 """
 import pytest
 from motor.motor_asyncio import AsyncIOMotorCollection
-import sys
-sys.path.append("..")
+# import sys
+# sys.path.append("..")
 from aio_mongo_dm import exceptions, Document, AioCollection
 
 
